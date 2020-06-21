@@ -23,21 +23,7 @@ $base-font: "HKGrotesk", "Helvetica", "Arial";
   src: url("../public/fonts/hkgroteskregular.woff");
   font-weight: regular;
   }
-
-main {
-    width: 100%;
-    overflow-x:hidden;
-}
-
-body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: $base-color !important;
-  font-family: $base-font !important;
-  background: $background-color;
-  overflow-x:hidden;
-}
-
+  
 h1,
 h2,
 h3,
@@ -48,343 +34,29 @@ h6 {
   color: $base-color;
 }
 
-iframe {
-    width: 100%;
-    border: 0;
-}
-
 a {
   color: $base-color;
 }
 
-.rounded {
-  border-radius: 1.25rem !important;
-}
 
-.btn-primary {
-  color: #fff;
-  background-color: $primary-color;
-  border-color: $primary-color;
-}
-
-.navbar-light .navbar-toggler {
-  border: none;
-  color: #333 !important;
-}
-
-.navbar {
-  opacity: 1;
-  transition: visibility 0.3s linear, opacity 0.3s linear, background-color 0.2s linear ;
-  background-color: $background-color;
-}
-
-.navbar-dark {
-  background-color: $base-color;
-}
-
-.hidden {
-  opacity: 0 !important;
-}
-
-p {
-  color: $base-color;
-}
-
-.content {
-  position: absolute;
-  top: 0;
-}
-
-section {
-  background-color: $background-color;
-}
-
-.hero-header {
-  background: $background-color;
-  /* background: linear-gradient(180deg, #E9F3F5 0%, #E9F3F5 60%); */
-}
-
-.hero-text {
-  margin-top: 5%;
-  margin-left: -5%;
-  margin-bottom: 52px;
-}
-
-.hero-phone-holder {
-  max-height: 450px;
-  padding-top: 36px;
-}
-
-.hero-phone {
-  max-height: 760px;
-}
-
-.raptor-logo {
-  max-width: 70px !important;
-  margin: 37px 26px 29px 26px;
-}
-.raptor-logo-top {
-  width: 48px !important;
-  height: 35px !important;
-  margin-top: -3px;
-  background-image: url("../public/images/raptorlogo.png"); 
-  background-size: cover;
-  float: left;
-  object-fit: cover;
-}
-.navbar-dark .raptor-logo-top {
-  background-image: url(../public/images/raptorlogowhite.png); 
-}
-.navbar-brand{
-    opacity: 1;
-    width: 142px;
-    overflow: hidden;
-
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-}
-.navbar-brand.hidden {
-    width: 0px !important;
-    opacity: 0;
-}
-.navbar-brand.hidden.dontHide {
-    width: 142px !important;
-    opacity: 1 !important;
-}
-
-
-.neomorph {
-  position: relative;
-  display: inline-block;
-  border-radius: 36px;
-  background: $background-color;
-  box-shadow: -5px 5px 10px #d9e2e4,
-    5px -5px 10px #f5ffff;
+.face {
+  
+  border-radius: 10px;
+  overflow: hidden;
   width: fit-content;
   height: fit-content;
+  box-shadow: 0px 15px 25px -20px rgba(0,0,0,.8);
+  margin: 15px 15px;
 }
-
-.neomorph .centered {
-  max-height: 60%;
-  max-width: 60%;
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+.face img {
+  width: 50%;
+  transition: transform .2s;
+  z-index: 0;
 }
-
-.square {
-  width: 122px;
-  height: 122px;
-}
-
-.companies {
-  margin-top: 20px;
-  max-width: 758px !important;
-  width: 90%;
-}
-
-#accordion .btn {
-  pointer-events: none;
-  color: $base-color;
-  display: block;
-  text-align: left;
-  padding-left: 16px;
-  font-size: large;
-}
-
-#accordion p {
-  margin-left: 40px;
-}
-
-.charmander {
-  position: absolute;
-  right: -90px;
-  bottom: 48%;
-  width: 110px;
-}
-
-.macbook {
-  margin: 6%;
-  width: fit-content;
-  height: fit-content;
-  position: relative;
-  display: inline-block;
-
-  -webkit-transition: transform 0.2s ease-out;
-  -moz-transition: transform 0.2s ease-out;
-  -o-transition: transform 0.2s ease-out;
-  transition: transform 0.2s ease-out;
-}
-
-.macbook img,
-.macbook video {
-  max-height: 600px;
-  object-fit: cover;
-}
-
-.macbook:after {
-  content: "";
-  position: absolute;
-  top: -7.4%;
-  left: -16%;
-  width: 205%;
-  height: 144%;
-  background-size: contain;
-  background-image: url(../public/images/macbook.png);
-  background-repeat: no-repeat;
-}
-
-
-.iphoneX {
-  margin: 6%;
-  width: fit-content;
-  height: fit-content;
-  position: relative;
-  display: inline-block;
-
-  -webkit-transition: transform 0.2s ease-out;
-  -moz-transition: transform 0.2s ease-out;
-  -o-transition: transform 0.2s ease-out;
-  transition: transform 0.2s ease-out;
-}
-
-.iphoneX img,
-.iphoneX video {
-  max-height: 600px;
-}
-
-.iphoneX:after {
-  content: "";
-  position: absolute;
-  top: -8%;
-  left: -49%;
-  width: 166%;
-  height: 125%;
-  background-size: contain;
-  background-image: url(../public/images/iphone_x.png);
-  background-repeat: no-repeat;
-}
-
-.playButton {
-  pointer-events: none;
-  position: absolute;
-  top: 43%;
-  margin-left: 33.5%;
-  width: 33%;
-  z-index: 2;
-  opacity: .8;
-}
-
-.playButton:hover {
-  opacity: 1;
-}
-
-.iphoneX:hover {
-    //z-index: 99;
-    transform: scale(1.05) translate(20%, -1%) rotate(1deg);
-}
-.iphoneX.video:hover, .iphoneX.left-1:hover {
-    //z-index: 99;
-    transform: scale(1) translate(0, 0) rotate(0deg);
-}
-
-.click-disabled {
-  pointer-events: none;
-}
-
-.left-1 {
-  left: 0%;
-  width: 36%;
-  top: 2%;
-  z-index: 3;
-}
-
-.left-2 {
-  position: absolute;
-  left: 32%;
-  width: 33%;
-  top: 4%;
+.face img:hover {
+  transform: scale(1.1);
   z-index: 2;
 }
-.baby .left-2 {
-  transform: rotate(-90deg); bottom: 15%; top: unset;
-}
-
-.baby .left-3 {
-  transform: rotate(-100deg); bottom: 45%; left: 50%; top: unset;
-}
-
-.left-3 {
-  position: absolute;
-  left: 60%;
-  width: 30%;
-  top: 8%;
-  z-index: 1;
-}
-
-.work {
-  min-height: 600px;
-}
-
-
-.color {
-  background-color: $base-color;
-}
-
-.color h1,
-.color h2,
-.color h3,
-.color h4,
-.color h5,
-.color h6,
-.color p,
-.color .btn-link {
-  color: white;
-}
-
-::selection {
-  background: $base-color;
-  color: $background-color;
-}
-::-moz-selection {
-  background: $base-color;
-  color: $background-color;
-}
-
-.color small {
-  color: rgba(255, 255, 255, .22);
-}
-
-.pull-right{
-    transform:translate(100%, 0);
-}
-.pull-left{
-    transform:translate(-100%, 0);
-}
-
-
-
-// Team
-.team-img {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  transition: transform 0.2s ease-in-out, opacity 0.2s linear;
-  border: 5px solid #E9F3F5;
-  box-shadow: -5px 5px 10px #d9e2e4, 5px -5px 10px #ffffff;
-  margin-top: 32px;
-}
-.team-img:hover {
-  transform: scale(1.5);
-}
-
 /* Small devices (landscape phones, 576px and up) */
 @include media-breakpoint-down(sm) {
 }
@@ -392,46 +64,6 @@ section {
 /* Medium devices (tablets, 768px and up) */
 @include media-breakpoint-down(md) {
 
-  .baby .left-2 {
-    transform: rotate(-90deg); bottom: -15%; top: unset;
-  }
-  
-  .baby .left-3 {
-    transform: rotate(-100deg); bottom: 25%; left: 50%; top: unset;
-  }
-    .work {
-      margin-bottom: 48px;
-    }
-    .pull-right{
-        transform:translate(0, 0);
-    }
-    .pull-left{
-        transform:translate(0, 0);
-    }
-    .left-1 {
-      margin-top: 4%;
-    }
-    
-  .hero-phone-holder {
-    max-height: none;
-    padding-top: 0px;
-  }
-
-  .hero-phone {
-    max-width: 90% !important;
-    height: auto;
-    margin-left: -5% !important;
-  }
-
-  .hero-text {
-    margin-top: -20%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .secondSection {
-    margin-top: 0;
-  }
 }
 
 
