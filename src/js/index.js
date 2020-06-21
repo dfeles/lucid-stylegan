@@ -16,14 +16,14 @@ function preload() {
 
 
       containers[i] = document.createElement("div");
-      containers[i].className = "mt-5 col-lg-4 col-md-6 col-sm-12"
+      containers[i].className = "neuron mt-5 col-lg-4 col-md-6 col-sm-12"
       containers[i].id = i;
 
       imageContainers[i] = document.createElement("div");
       imageContainers[i].className = "face"
       imageContainers[i].appendChild(faceImages[i]);
       imageContainers[i].appendChild(lucidImages[i]);
-      imageContainers[i].id = i;
+      imageContainers[i].value = i;
 
       containers[i].appendChild(imageContainers[i]);
 
@@ -37,10 +37,15 @@ function preload() {
       document.getElementById("content").appendChild(containers[i]);
 
 
+      imageContainers[i].onclick = function(e){
 
-      containers[i].onclick = function(e){
-        var i = e.target.id * 1 ;
+        var i = e.target.value * 1 ;
         
+        for (var n = 0; n < 128; n++) {
+          containers[n].classList.remove('active')
+        }
+        containers[i].classList.add('active')
+
         var video = document.createElement('video');
         video.src = "public/videos/" + (i) + ".mp4";
         video.className = "video";
