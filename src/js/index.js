@@ -30,7 +30,7 @@ function preload() {
 
       var title = document.createElement("h4");
       title.className = "text-center"
-      title.innerHTML = "<b>Neuron " + (i+1) + "</b>";
+      title.innerHTML = "<b>Neuron " + i + "</b>";
       containers[i].appendChild(title);
 
 
