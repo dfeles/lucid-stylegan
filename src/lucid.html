@@ -26,10 +26,10 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="./index.html">Faces</a>
+            <a class="nav-link " href="./index.html">Faces</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./lucid.html">Lucid</a>
+            <a class="nav-link active" href="./lucid.html">Lucid</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./about.html">About</a>
@@ -41,13 +41,32 @@
 
   <main role="main" class="content">
 
-    <section class="hero-header">
+    <section class="hero-header mt-5">
       <div class="container-fluid mt-5">
 
-        <div class="row" id="content">
-          <div class="col-12 mx-auto text-center" id="facesContent">
-            Neurons
+        <div class="row mt-5" id="content">
+          <div class="col-12 mx-auto text-center" id="lucidContent">
+            Type
+            <br>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button id="animals" type="button" class="btn btn-primary active">Animals</button>
+              <button id="celeba" type="button" class="btn btn-primary">Celeba</button>
+              <button id="flowers" type="button" class="btn btn-primary">Flowers</button>
+            </div>
+            <br>
+            <br>
+            Layer:
+            <br>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="layersSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu  mt-5" aria-labelledby="dropdownMenuButton" id="layers">
+              </div>
+            </div>
           </div>
+        </div>
+        <div id="lucidImages" class="row">
         </div>
       </div>
     </section>
@@ -70,5 +89,7 @@
       </div>
     </footer>
   </main>
+  <script src="/js/lucid.js"></script>
 </body>
+
 </html>
